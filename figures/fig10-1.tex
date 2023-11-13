@@ -1,0 +1,40 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usetikzlibrary{positioning}
+\usepackage{fontspec}
+\setmainfont
+[
+Ligatures={TeX,Common},
+PunctuationSpace=0,
+Numbers={Proportional},
+BoldFont = LibertinusSerif-Semibold.otf,
+ItalicFont = LibertinusSerif-Italic.otf,
+BoldItalicFont = LibertinusSerif-SemiboldItalic.otf,
+BoldSlantedFont = LibertinusSerif-Semibold.otf,
+SlantedFont    = LibertinusSerif-Regular.otf,
+SlantedFeatures = {FakeSlant=0.25},
+BoldSlantedFeatures = {FakeSlant=0.25},
+SmallCapsFeatures = {FakeSlant=0},
+]
+{LibertinusSerif-Regular.otf} 
+\usepackage{todonotes}
+\begin{document}
+	\begin{tikzpicture}\footnotesize
+		\matrix (hierarchy)
+		[matrix of nodes, 
+		nodes in empty cells,
+		nodes={text width=2.8cm, align=center},
+		row sep=.2cm
+		]
+		{
+			& & & \\[0.1ex]
+			maximal ikonsch & minimal ikonisch & nicht-ikonisch & kontra-ikonisch \\
+			bǫ᪹u - bǫ᪹um ,Bub` & v߫iš - viʃ̌ ,Fisch` & hēvα - hēvα ,Hafen` & lōαb - l߮ǫi ,Laib`\\
+			biəkɑ - biəkɑn ,Birke` & haud - hait ,Haut` & ạntn̥ - ạntn̥ ,Ente` & mōαd - mōi ,Magd`\\
+		};
+		\draw [left color=black, 
+		right color=white]
+		(hierarchy-1-1.north west) rectangle (hierarchy-1-4.south east);
+	\end{tikzpicture}
+\end{document}

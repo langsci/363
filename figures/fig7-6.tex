@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{calc}
+\usepackage{libertinus}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{matrix, patterns, backgrounds}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\begin{document}
+\begin{tabular}{@{}rrp{\widthof{Neutr.}}   rp{\widthof{Neutr.}}  r@{~}r>{\centering}p{\widthof{Neutr.}}   r@{~}rp{\widthof{Neutr.}}@{~}}
+	& & \multicolumn{6}{c}{Singular} & & & \\\cmidrule{3-8}
+	& & Mask. & & Neutr. & & & Fem. & & & Plural\\
+	& Nom. & \cellcolor{gray!25} & & & & Nom. & \cellcolor{gray!25} & & Nom. & \cellcolor{gray!25}\\
+	(1) & Akk. & \cellcolor{gray!25} & & & (1) & Akk. & \cellcolor{gray!25} & (1) & Akk. & \cellcolor{gray!25}\\
+	& Dat. & \cellcolor{gray!25} & Nom. & \cellcolor{gray!25} & & Dat. & \cellcolor{gray!25} & & Dat. & \cellcolor{gray!25} \\
+	& & & Akk. & \cellcolor{gray!25} & & & & & & \\
+	& Nom. & \cellcolor{gray!25} & Dat. & \cellcolor{gray!25} 
+	\begin{tikzpicture}[overlay]
+	\fill [pattern=north east lines] (-0.2105,-0.1265) rectangle (1.0985,0.3);
+	\end{tikzpicture} & & Nom. & \cellcolor{gray!25} & & Nom. & \cellcolor{gray!25} \\
+	(2) & Akk. & \cellcolor{gray!80} & & & (2) & Akk. & \cellcolor{gray!80} & (2) & Akk. & \cellcolor{gray!25} \\
+	& Dat. & \cellcolor{gray!80} & & & & Dat. & \cellcolor{gray!80} & & Dat. & \cellcolor{gray!80}\\
+\end{tabular}
+\end{document}

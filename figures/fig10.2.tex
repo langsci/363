@@ -1,0 +1,67 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usetikzlibrary{positioning}
+\usepackage{fontspec}
+\setmainfont
+[
+Ligatures={TeX,Common},
+PunctuationSpace=0,
+Numbers={Proportional},
+BoldFont = LibertinusSerif-Semibold.otf,
+ItalicFont = LibertinusSerif-Italic.otf,
+BoldItalicFont = LibertinusSerif-SemiboldItalic.otf,
+BoldSlantedFont = LibertinusSerif-Semibold.otf,
+SlantedFont    = LibertinusSerif-Regular.otf,
+SlantedFeatures = {FakeSlant=0.25},
+BoldSlantedFeatures = {FakeSlant=0.25},
+SmallCapsFeatures = {FakeSlant=0},
+]
+{LibertinusSerif-Regular.otf} 
+\usepackage{todonotes}
+\begin{document}
+	\begin{tikzpicture}\footnotesize
+		\matrix (continuum)
+		[matrix of nodes, 
+		nodes in empty cells,
+		nodes={text width=2.8cm, align=center},
+		row sep=.2cm
+		]
+		{
+			\textbf{Singular} & & & & \textbf{Plural} \\ 
+			& & & & \\[0.5ex]
+			\textbf{einsilbig} & \textbf{mehrsilbig} & \textbf{mehrsilbig} & \textbf{einsilbig} & \textbf{mehrsilbig}\\[0.1pt]
+			\textbf{Langvokal} & \textbf{Reduktionssilbe \textit{-n, -α}} & \textbf{Reduktionssilbe \textit{-n, -α}} & \textbf{Kurzvokal} & \textbf{Reduktionssilbe \textit{-αn} oder Nasal+\textit{α}}\\
+			\textbf{Konsonantenelision im Auslaut oder Lenisobstruent} & & & \textbf{Konsonant im Auslaut oder Fortisobstruent} &  \\
+			\textbf{\textit{der/das}} & \textbf{\textit{der/das}} & \textbf{die} & \textbf{\textit{die}} & \textbf{\textit{die}} \\
+			dα vīš ,der Fisch` & & & bviʃ̌ ,die Fische` & \\
+			dα bō ,der Bach` & & & di bạx ,die Bäche` & \\
+			snēsd ,das Nest` & & di neʃtα ,die Nester` & & \\ 
+			& & di dašn ,die Tasche` & & di dašnα ,die Taschen` \\
+			& & di biəkα ,die Birke` & & di biəkαn ,die Birken` \\
+			& dα haufα ,der Haufen` & di haufα ,die Haufen` & & di haufαn ,die Haufen` \\
+		};
+		\draw [left color=black, 
+		right color=black,
+		middle color=white]
+		(continuum-2-1.north west) rectangle (continuum-2-5.south east);
+		\draw [dotted] (continuum-7-1)  -- (continuum-7-4);
+		\draw [dotted] (continuum-8-1)  -- (continuum-8-4);
+		\draw [dotted] (continuum-9-1)  -- (continuum-9-3);
+		\draw [dotted] (continuum-12-2.center) ++(1.3cm,0pt) -- (continuum-12-3.west) -- ++(0.2cm,0pt);
+		\draw [dotted] (continuum-10-3) -- (continuum-10-5);
+		\draw [dotted] (continuum-11-3) -- (continuum-11-5);
+		\draw [dotted] (continuum-12-3) -- (continuum-12-5);
+	\end{tikzpicture}
+\end{document}
+
+ʃ
+š
+ī
+ō
+ē
+ǝ
+̆
+ạ
+̌ʃ
+̌

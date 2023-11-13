@@ -1,0 +1,47 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usetikzlibrary{positioning}
+\usepackage{libertinus}
+\usepackage{todonotes}
+\begin{document}
+	\begin{tikzpicture}\footnotesize
+		\matrix (schema)
+		[matrix of nodes, 
+		nodes in empty cells,
+		nodes={text width=2.8cm, align=center},
+		row sep=.33cm
+		]
+		{
+			& & di dašn ,die Tasche` & & \\[.3cm]
+			& & di dašn ‚die Taschen` & & \\
+			& dα haufn ,Der Haufen` & di haufn ,die Haufen` & & \\
+			& əs vensdər ,das Fenster` & & di vensdər ,die Fenster` & \\
+			\textbf{Singular} & & & & \textbf{Plural} \\ 
+			& & & & \\[0.5ex]
+			& \textbf{mehrsilbig} & \textbf{mehrsilbig} & \textbf{mehrsilbig} & \textbf{mehrsilbig}\\[0.1pt]
+			& \textbf{Reduktionssilbe mhd. -\textit{en}, -\textit{er}} & \textbf{Reduktionssilbe mhd. -\textit{en}} & \textbf{Reduktionssilbe mhd. -\textit{er}} & \textbf{Reduktionssilbe bair. -\textit{αn} oder Nasal+\textit{α}}\\
+			& \textbf{\textit{der/das}} & \textbf{\textit{die}} & \textbf{\textit{die}} & \textbf{\textit{die}} \\
+			& svensdα ,das Fenster` & & bvensdα ,die Fenster` &\\
+		& dα haufα ,der Haufen` & di haufα ,die Haufen` & & di haufαn ,die Haufen` \\
+		& & di biəkα ,die Birke` & & di biəkαn ,die Birken` \\
+		& & di dašn ,die Tasche` & & di dašnα ,die Taschen` \\
+		};
+		\node[left = 0.1cm of schema-3-1] {\textbf{Ofr.}};
+		\node[left = 0.0cm of schema-11-1] {\textbf{Bair.}};
+		%draws für linien in oberer gruppe
+		\draw [dotted] (schema-1-3)  -- (schema-2-3);
+		\draw [dotted] (schema-3-2.center) ++(1.35cm,0pt) -- (schema-3-3.west) -- ++(0.16cm,0pt);
+		\draw [anchor=east, dotted] (schema-4-2) -- (schema-4-4);
+		\draw [left color=black, %draw für die zweite gruppe
+		right color=black,
+		middle color=white]
+		(schema-6-1.north west) rectangle (schema-6-5.south east);
+		%draws für die dritte gruppe
+		\draw [dotted] (schema-10-2)  -- (schema-10-4);
+		\draw [dotted] (schema-11-2.center) ++(1.3cm,0pt) -- (schema-11-3.west) -- ++(0.2cm,0pt);
+		\draw [dotted] (schema-11-3) -- (schema-11-5);
+		\draw [dotted] (schema-12-3) -- (schema-12-5);
+		\draw [dotted] (schema-13-3) -- (schema-13-5);
+	\end{tikzpicture}
+\end{document}
